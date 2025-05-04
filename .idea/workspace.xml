@@ -212,12 +212,12 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
-      <module name="TicketVerse" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Smart Tomcat.Tomcat: TicketVerse" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.100" />
     </list>
   </component>
