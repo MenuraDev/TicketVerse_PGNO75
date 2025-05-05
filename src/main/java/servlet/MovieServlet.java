@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -33,8 +34,7 @@ public class MovieServlet extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
-        /*
-        if (session == null || session.getAttribute("user") == null || !"admin".equals(((User) session.getAttribute("user")).getRole())) {
+       /* if (session == null || session.getAttribute("user") == null || !"admin".equals(((User) session.getAttribute("user")).getRole())) {
             response.sendRedirect("login.jsp"); // Redirect if not admin
             return;
         }
@@ -83,9 +83,8 @@ public class MovieServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+/*
         HttpSession session = request.getSession(false);
-        /*
         if (session == null || session.getAttribute("user") == null || !"admin".equals(((User) session.getAttribute("user")).getRole())) {
             response.sendRedirect("login.jsp");
             return;
@@ -116,30 +115,28 @@ public class MovieServlet extends HttpServlet {
         String poster = request.getParameter("poster");
         String synopsis = request.getParameter("synopsis");
         String genre = request.getParameter("genre");
-        int duration = Integer.parseInt(request.getParameter("duration")); // Handle potential NumberFormatException
+        int duration = Integer.parseInt(request.getParameter("duration"));
         String rating = request.getParameter("rating");
         String director = request.getParameter("director");
         String cast = request.getParameter("cast");
         String trailerURL = request.getParameter("trailerURL");
-        String movieStatus = request.getParameter("movieStatus"); // Get movie status
+        String movieStatus = request.getParameter("movieStatus");
+        LocalDate releaseDate = LocalDate.parse(request.getParameter("releaseDate"));
 
-        // Handle multiple showtimes (important part)
         String[] showtimesArray = request.getParameterValues("showtimes");
         List<String> showtimes = new ArrayList<>();
         if (showtimesArray != null) {
-            showtimes = Arrays.asList(showtimesArray);  // Convert to List
+            showtimes = Arrays.asList(showtimesArray);
         }
 
-
-        Movie movie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus);
+        Movie movie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes, movieStatus, releaseDate);
 
         try {
             movieService.addMovie(movie);
-            response.sendRedirect("movie?action=manageMovies"); // Redirect to manage movies
+            response.sendRedirect("movie?action=manageMovies");
         } catch (IOException e) {
-            // Handle file writing errors
             request.setAttribute("errorMessage", "Failed to save movie: " + e.getMessage());
-            request.getRequestDispatcher("/addMovie.jsp").forward(request,response); // Go back to the form
+            request.getRequestDispatcher("/addMovie.jsp").forward(request,response);
         }
     }
 
@@ -154,25 +151,24 @@ public class MovieServlet extends HttpServlet {
         String director = request.getParameter("director");
         String cast = request.getParameter("cast");
         String trailerURL = request.getParameter("trailerURL");
-        String movieStatus = request.getParameter("movieStatus"); // Get movie status
+        String movieStatus = request.getParameter("movieStatus");
+        LocalDate releaseDate = LocalDate.parse(request.getParameter("releaseDate"));
 
-        // Get showtimes (same as in saveMovie)
         String[] showtimesArray = request.getParameterValues("showtimes");
         List<String> showtimes = new ArrayList<>();
         if (showtimesArray != null) {
             showtimes = Arrays.asList(showtimesArray);
         }
 
-        // Create an updated Movie object
-        Movie updatedMovie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus);
-        updatedMovie.setId(id); // Set the ID, very important!
+        Movie updatedMovie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes, movieStatus, releaseDate);
+        updatedMovie.setId(id);
 
         try {
-            movieService.updateMovie(updatedMovie); // Update the movie in the service
-            response.sendRedirect("movie?action=manageMovies"); // Redirect to manage movies
+            movieService.updateMovie(updatedMovie);
+            response.sendRedirect("movie?action=manageMovies");
         } catch (IOException e) {
             request.setAttribute("errorMessage", "Failed to save movie: " + e.getMessage());
-            request.getRequestDispatcher("/editMovie.jsp").forward(request,response); // Go back to the form
+            request.getRequestDispatcher("/editMovie.jsp").forward(request,response);
         }
     }
 }
