@@ -10,13 +10,7 @@
     </style>
 </head>
 <body>
-<h1>Add New Movie</h1>
-<% if (request.getAttribute("errorMessage") != null) { %>
-<div class="alert alert-danger" role="alert">
-    <strong><%= request.getAttribute("errorMessage") %></strong>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<% } %>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
