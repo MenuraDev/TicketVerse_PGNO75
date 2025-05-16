@@ -97,3 +97,77 @@ public class UserService {
         user.setRole(parts[8]); // Parse the role
         return user;
     }
+
+    private String formatUser(User user) {
+        return String.join(DELIMITER,
+                user.getId().toString(),
+                user.getUsername(),
+                user.getPasswordHash(),
+                user.getEmail(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getCreatedAt().toString(),
+                user.getUpdatedAt().toString(),
+                user.getRole()); // Format the role
+    }
+
+    private long getNextUserId(List<User> users) {
+        return users.stream()
+                .mapToLong(User::getId)
+                .max()
+                .orElse(0L) + 1;
+    }
+
+    public static String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(password.getBytes(StandardCharsets.UTF_8));
+            return bytesToHex(hash);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Error hashing password", e); // More specific exception
+        }
+    }
+
+    private static String bytesToHex(byte[] hash) {
+        StringBuilder hexString = new StringBuilder(2 * hash.length);
+        for (byte b : hash) {
+            String hex = Integer.toHexString(0xff & b);
+            if (hex.length() == 1) {
+                hexString.append('0');
+            }
+            hexString.append(hex);
+        }
+        return hexString.toString();
+    }
+
+    public User authenticateUser(String username, String password) throws IOException {
+        List<User> users = getAllUsers();
+        for (User user : users) {
+            if (user.getUsername().equalsIgnoreCase(username) &&
+                    UserService.hashPassword(password).equals(user.getPasswordHash())) {
+                return user; // Return the user object if credentials match
+            }
+        }
+        return null; // Return null if no match is found
+    }
+    // Method to delete a user by ID
+    public void deleteUser(Long userId) throws IOException {
+        synchronized (lock) {
+            List<User> users = getAllUsers();
+            users.removeIf(user -> user.getId().equals(userId)); // Use removeIf for concise removal
+            saveAllUsers(users);
+        }
+    }
+
+    // Method to update an existing user
+    public void updateUser(User updatedUser) throws IOException {
+        synchronized (lock) {
+            List<User> users = getAllUsers();
+            for (int i = 0; i < users.size(); i++) {
+                if (users.get(i).getId().equals(updatedUser.getId())) {
+                    users.set(i, updatedUser); // Replace the old user with the updated user
+                    break;
+                }
+            }
+            saveAllUsers(users);
+        }

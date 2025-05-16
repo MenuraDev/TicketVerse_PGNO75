@@ -354,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747402508680</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update 2 UserService.java">
+      <option name="closed" value="true" />
+      <created>1747402628335</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1747402628335</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -383,7 +391,8 @@
     <MESSAGE value="User model update" />
     <MESSAGE value="Update addMovie.jsp function" />
     <MESSAGE value="Add UserService.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UserService.java" />
+    <MESSAGE value="Update 2 UserService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 2 UserService.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
