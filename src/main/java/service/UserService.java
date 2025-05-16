@@ -49,3 +49,51 @@ public class UserService {
         return getAllUsers().stream()
                 .anyMatch(u -> u.getUsername().equalsIgnoreCase(username));
     }
+
+    public boolean emailExists(String email) throws IOException {
+        return getAllUsers().stream()
+                .anyMatch(u -> u.getEmail().equalsIgnoreCase(email));
+    }
+    public List<User> getAllUsers() throws IOException {
+        if (!Files.exists(usersFilePath)) {
+            return new ArrayList<>();
+        }
+        try {
+            return Files.readAllLines(usersFilePath, StandardCharsets.UTF_8)
+                    .stream()
+                    .map(this::parseUser)
+                    .collect(Collectors.toList());
+        } catch (IOException e){
+            throw new IOException("Failed to get all users", e);
+        }
+    }
+
+    private void saveAllUsers(List<User> users) throws IOException {
+        List<String> lines = users.stream()
+                .map(this::formatUser)
+                .collect(Collectors.toList());
+
+        try {
+            Files.write(usersFilePath, lines, StandardCharsets.UTF_8,
+                    StandardOpenOption.CREATE,
+                    StandardOpenOption.TRUNCATE_EXISTING);
+        } catch (IOException e){
+            throw new IOException("Failed to save all users", e);
+        }
+
+    }
+
+    private User parseUser(String line) {
+        String[] parts = line.split("\\Q" + DELIMITER + "\\E");
+        User user = new User();
+        user.setId(Long.parseLong(parts[0]));
+        user.setUsername(parts[1]);
+        user.setPasswordHash(parts[2]);
+        user.setEmail(parts[3]);
+        user.setFirstName(parts[4]);
+        user.setLastName(parts[5]);
+        user.setCreatedAt(LocalDateTime.parse(parts[6]));
+        user.setUpdatedAt(LocalDateTime.parse(parts[7]));
+        user.setRole(parts[8]); // Parse the role
+        return user;
+    }
