@@ -22,3 +22,12 @@ public class UserService {
         this.usersFilePath = Paths.get(filePath);
         initializeFile(); // Ensure file exists
     }
+
+    private void initializeFile() {
+        try {
+            if (!Files.exists(usersFilePath.getParent())) {
+                Files.createDirectories(usersFilePath.getParent());
+            }
+            if (!Files.exists(usersFilePath)) {
+                Files.createFile(usersFilePath);
+            }
