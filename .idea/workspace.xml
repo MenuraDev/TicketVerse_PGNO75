@@ -9,8 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Update addMovie.jsp function">
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Add UserService.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -330,7 +331,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747401231381</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add UserService.java">
+      <option name="closed" value="true" />
+      <created>1747402120234</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747402120234</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add UserService.java">
+      <option name="closed" value="true" />
+      <created>1747402268726</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1747402268726</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,9 +373,10 @@
     <MESSAGE value="2025/03/22 15:00" />
     <MESSAGE value="2025/03/22 20:52" />
     <MESSAGE value="2025/03/29 11:59" />
-    <MESSAGE value="Update addMovie.jsp function" />
     <MESSAGE value="User model update" />
-    <option name="LAST_COMMIT_MESSAGE" value="User model update" />
+    <MESSAGE value="Update addMovie.jsp function" />
+    <MESSAGE value="Add UserService.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UserService.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

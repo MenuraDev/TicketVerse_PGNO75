@@ -31,3 +31,21 @@ public class UserService {
             if (!Files.exists(usersFilePath)) {
                 Files.createFile(usersFilePath);
             }
+
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to initialize user data file", e);
+        }
+    }
+
+    public void registerUser(User user) throws IOException {
+        synchronized (lock) { // Synchronize on the lock object
+            List<User> users = getAllUsers();
+            user.setId(getNextUserId(users));
+            users.add(user);
+            saveAllUsers(users);
+        }
+    }
+    public boolean usernameExists(String username) throws IOException {
+        return getAllUsers().stream()
+                .anyMatch(u -> u.getUsername().equalsIgnoreCase(username));
+    }
