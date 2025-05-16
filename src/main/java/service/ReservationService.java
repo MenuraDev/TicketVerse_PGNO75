@@ -130,7 +130,85 @@ public class ReservationService {
     }
   }
 
+  private String formatReservation(Reservation reservation) {
+    // Join the selected seats list into a single comma-separated string.
+    String seatsString = "";
+    if (reservation.getSelectedSeats() != null && !reservation.getSelectedSeats().isEmpty()) {
+      seatsString = String.join(SEAT_DELIMITER, reservation.getSelectedSeats());
+    }
 
+    return String.join(DELIMITER,
+        reservation.getId().toString(),
+        reservation.getMovieId().toString(),
+        reservation.getShowtime(),
+        reservation.getUserId().toString(),
+        seatsString,
+        reservation.getBeverages() != null ? reservation.getBeverages() : "", // Handle null beverages
+        reservation.getReservationTime().toString(),
+        Boolean.toString(reservation.isReservationStatus())
+    );
+  }
+
+  private long getNextReservationId(List<Reservation> reservations) {
+    return reservations.stream()
+        .mapToLong(Reservation::getId)
+        .max()
+        .orElse(0L) + 1;
+  }
+
+  /**
+   * Gets all seats that are already booked for a specific movie and showtime.
+   * @param movieId The ID of the movie.
+   * @param showtime The specific showtime string.
+   * @return A Set of seat identifiers (e.g., "A1", "C5") that are booked.
+   * @throws IOException If reading the reservations file fails.
+   */
+  public Set<String> getBookedSeats(Long movieId, String showtime) throws IOException {
+    List<Reservation> allReservations = getAllReservations(); // This is synchronized internally
+
+    return allReservations.stream()
+        .filter(r -> r.getMovieId().equals(movieId) && r.getShowtime().equals(showtime))
+        .flatMap(r -> r.getSelectedSeats().stream()) // Flatten the lists of seats into one stream
+        .collect(Collectors.toSet()); // Collect into a Set to get unique booked seats
+  }
+
+  // Method to get reservations for a specific user
+  public List<Reservation> getReservationsByUserId(Long userId) throws IOException {
+    // Use the existing lock for consistency, although reads might not strictly need it
+    // if writes always replace the whole file atomically. Better safe.
+    synchronized (lock) {
+      return getAllReservations().stream() // getAllReservations reads the whole file
+          .filter(r -> r.getUserId() != null && r.getUserId().equals(userId)) // Filter by user ID
+          .collect(Collectors.toList());
+    }
+  }
+
+  // Method to delete a specific reservation by its ID
+  public void deleteReservation(Long reservationId) throws IOException {
+    synchronized (lock) {
+      List<Reservation> reservations = getAllReservations();
+      boolean removed = reservations.removeIf(reservation -> reservation.getId().equals(reservationId));
+      if (removed) {
+        saveAllReservations(reservations);
+      }
+      // Optional: Log if the reservation was not found/removed, though not strictly an error
+      // if (removed) {
+      //    System.out.println("Reservation with ID " + reservationId + " deleted.");
+      // } else {
+      //     System.out.println("Reservation with ID " + reservationId + " not found for deletion.");
+      // }
+    }
+  }
+
+  // Optional but recommended: Get a single reservation by ID (useful for validation)
+  public Reservation getReservationById(Long reservationId) throws IOException {
+    synchronized (lock) {
+      return getAllReservations().stream()
+          .filter(r -> r.getId().equals(reservationId))
+          .findFirst()
+          .orElse(null); // Return null if not found
+    }
+  }
 
 
 }
