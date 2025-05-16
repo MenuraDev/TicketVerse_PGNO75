@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="2025/03/29 11:59" />
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Update addMovie.jsp function">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,7 +38,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/MenuraDev/TicketVerse_PGNO75.git&quot;,
-    &quot;accountId&quot;: &quot;70582b9b-0936-485b-90fc-66b5f48747ef&quot;
+    &quot;accountId&quot;: &quot;ce66faec-8fae-49d8-b24a-96ddfc814a74&quot;
   }
 }</component>
   <component name="LogFilters">
@@ -75,7 +77,7 @@
     &quot;Tomcat Server.Tomcat 9.0.100.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/TicketVerse&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -93,7 +95,7 @@
       <recent name="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse0\src\main\webapp\components" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.100">
+  <component name="RunManager" selected="Smart Tomcat.Tomcat: TicketVerse">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="ticketAppGroup75" />
       <method v="2">
@@ -217,17 +219,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.100" />
-    </list>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -323,7 +314,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743229840552</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update addMovie.jsp function">
+      <option name="closed" value="true" />
+      <created>1746693493951</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746693493951</updated>
+    </task>
+    <task id="LOCAL-00011" summary="User model update">
+      <option name="closed" value="true" />
+      <created>1747401231381</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1747401231381</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +356,9 @@
     <MESSAGE value="2025/03/22 15:00" />
     <MESSAGE value="2025/03/22 20:52" />
     <MESSAGE value="2025/03/29 11:59" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025/03/29 11:59" />
+    <MESSAGE value="Update addMovie.jsp function" />
+    <MESSAGE value="User model update" />
+    <option name="LAST_COMMIT_MESSAGE" value="User model update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -358,6 +367,12 @@
           <properties class="java.io.IOException" package="java.io" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/model/User.java</url>
+          <line>8</line>
+          <properties field="email" class="model.User" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
