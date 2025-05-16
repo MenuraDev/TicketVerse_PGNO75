@@ -9,8 +9,16 @@ public class Reservation {
   private Long movieId;
   private String showtime; // Store the specific showtime string (e.g., "2024-08-15T19:00")
   private Long userId;
-  private List<String> selectedSeats;
+  private List<String> selectedSeats; // e.g., ["A1", "A2", "C5"]
+  private String beverages; // Simple string for now, e.g., "cocacola:1,popcorn:2" or empty
   private LocalDateTime reservationTime;
+  private boolean reservationStatus; // false = pending, true = approved
+
+  // Constructors
+  public Reservation() {
+    this.reservationTime = LocalDateTime.now(); // Set timestamp on creation
+    this.reservationStatus = false;
+  }
 
   public Reservation(Long movieId, String showtime, Long userId, List<String> selectedSeats, String beverages) {
     this(); // Call default constructor to set timestamp
@@ -18,6 +26,8 @@ public class Reservation {
     this.showtime = showtime;
     this.userId = userId;
     this.selectedSeats = selectedSeats;
+    this.beverages = beverages != null ? beverages : ""; // Ensure beverages is not null
+    this.reservationStatus = false;
   }
 
   // --- Getters and Setters ---
@@ -61,6 +71,14 @@ public class Reservation {
     this.selectedSeats = selectedSeats;
   }
 
+  public String getBeverages() {
+    return beverages;
+  }
+
+  public void setBeverages(String beverages) {
+    this.beverages = beverages;
+  }
+
   public LocalDateTime getReservationTime() {
     return reservationTime;
   }
@@ -69,5 +87,11 @@ public class Reservation {
     this.reservationTime = reservationTime;
   }
 
+  public boolean isReservationStatus() {
+    return reservationStatus;
+  }
 
+  public void setReservationStatus(boolean reservationStatus) {
+    this.reservationStatus = reservationStatus;
+  }
 }
