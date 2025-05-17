@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Movie ticket reservation added delete reservation function to user" />
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Movie ticket reservation added delete reservation function to user updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +26,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="IT24102155 &lt;it24102155@my.sliit.lk&gt;" />
+        <option value="it24102155" />
+        <option value="it24" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -89,6 +99,12 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -240,6 +256,9 @@
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Menura Lakvindu\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="" />
@@ -264,7 +283,7 @@
       <workItem from="1746807893177" duration="760000" />
       <workItem from="1747380368364" duration="7008000" />
       <workItem from="1747455774280" duration="96000" />
-      <workItem from="1747459544397" duration="2854000" />
+      <workItem from="1747459544397" duration="4114000" />
     </task>
     <task id="LOCAL-00001" summary="1.000">
       <option name="closed" value="true" />
@@ -450,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747466184195</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Movie ticket reservation added delete reservation function to user updated">
+      <option name="closed" value="true" />
+      <created>1747468684477</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1747468684477</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,8 +512,10 @@
     <MESSAGE value="Movie ticket reservation implement booking services backend" />
     <MESSAGE value="Movie ticket reservation implement queue in reservations" />
     <MESSAGE value="Movie ticket reservation conected reservation.txt with BookingServlet.java to store reservattions" />
+    <MESSAGE value="Movie ticket reservation added delete reservation function to user modified" />
     <MESSAGE value="Movie ticket reservation added delete reservation function to user" />
-    <option name="LAST_COMMIT_MESSAGE" value="Movie ticket reservation added delete reservation function to user" />
+    <MESSAGE value="Movie ticket reservation added delete reservation function to user updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Movie ticket reservation added delete reservation function to user updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
