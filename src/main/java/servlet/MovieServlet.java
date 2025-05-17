@@ -49,6 +49,7 @@ public class MovieServlet extends HttpServlet {
                 case "addMovie":
                     request.getRequestDispatcher("/addMovie.jsp").forward(request, response);
                     break;
+                    //edit movies, delete, manage
                 case "editMovie":
                     Long movieId = Long.parseLong(request.getParameter("id"));
                     Movie movie = movieService.getMovieById(movieId);  // Get movie by ID
@@ -109,7 +110,6 @@ public class MovieServlet extends HttpServlet {
     }
 
 
-
     private void saveMovie(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String title = request.getParameter("title");
         String poster = request.getParameter("poster");
@@ -139,7 +139,6 @@ public class MovieServlet extends HttpServlet {
             request.getRequestDispatcher("/addMovie.jsp").forward(request,response);
         }
     }
-
     private void updateMovie(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         Long id = Long.parseLong(request.getParameter("id"));
         String title = request.getParameter("title");
@@ -171,4 +170,7 @@ public class MovieServlet extends HttpServlet {
             request.getRequestDispatcher("/editMovie.jsp").forward(request,response);
         }
     }
+
+
+
 }
