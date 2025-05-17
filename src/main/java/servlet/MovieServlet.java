@@ -156,6 +156,7 @@ public class MovieServlet extends HttpServlet {
         String cast = request.getParameter("cast");
         String trailerURL = request.getParameter("trailerURL");
         String movieStatus = request.getParameter("movieStatus"); // Get movie status
+        LocalDate releaseDate = LocalDate.parse(request.getParameter("releaseDate"));
 
         // Get showtimes (same as in saveMovie)
         String[] showtimesArray = request.getParameterValues("showtimes");
@@ -165,7 +166,7 @@ public class MovieServlet extends HttpServlet {
         }
 
         // Create an updated Movie object
-        Movie updatedMovie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus);
+        Movie updatedMovie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus, releaseDate);
         updatedMovie.setId(id); // Set the ID, very important!
 
         try {
