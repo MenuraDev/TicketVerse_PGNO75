@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ticketAppGroup75:war exploded" />
+      <artifact name="TicketVerse:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Movie ticket reservation added delete reservation function to user" />
+=======
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="2025/03/29 11:59">
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" afterDir="false" />
+    </list>
+>>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,9 +82,15 @@
     "Smart Tomcat.Tomcat: TicketVerse.executor": "Run",
     "Smart Tomcat.Tomcat: TicketVerse0.executor": "Run",
     "Tomcat Server.Tomcat 9.0.100.executor": "Run",
+<<<<<<< HEAD
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Menura Lakvindu/Documents/New folder/New folder/New folder/New folder/TicketVerse",
+=======
+    "git-widget-placeholder": "Ahamed-Azib",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse",
+>>>>>>> main
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -126,6 +138,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="c60ead4f-64c9-4ee5-81d1-28556225a904" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1090" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -260,11 +274,15 @@
       <workItem from="1746014583957" duration="704000" />
       <workItem from="1746161933769" duration="3595000" />
       <workItem from="1746377532352" duration="239000" />
+<<<<<<< HEAD
       <workItem from="1746380354667" duration="5963000" />
       <workItem from="1746807893177" duration="760000" />
       <workItem from="1747380368364" duration="7008000" />
       <workItem from="1747455774280" duration="96000" />
       <workItem from="1747459544397" duration="2854000" />
+=======
+      <workItem from="1747467810494" duration="452000" />
+>>>>>>> main
     </task>
     <task id="LOCAL-00001" summary="1.000">
       <option name="closed" value="true" />
