@@ -63,14 +63,7 @@
             </td>
             <td>
                     <%-- Form for the Cancel Button --%>
-                <form action="dashboard" method="post" style="display: inline;"> <%-- Use POST --%>
-                    <input type="hidden" name="action" value="cancelReservation">
-                    <input type="hidden" name="reservationId" value="${detail.id}"> <%-- Use the reservation ID --%>
-                    <button type="submit" class="btn btn-sm btn-danger"
-                            onclick="return confirm('Are you sure you want to cancel this reservation?');">
-                        <i class="fas fa-times me-1"></i> Cancel
-                    </button>
-                </form>
+
             </td>
         </tr>
     </c:forEach>
