@@ -5,93 +5,93 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class Reservation {
-  private Long id;
-  private Long movieId;
-  private String showtime; // Store the specific showtime string (e.g., "2024-08-15T19:00")
-  private Long userId;
-  private List<String> selectedSeats; // e.g., ["A1", "A2", "C5"]
-  private String beverages; // Simple string for now, e.g., "cocacola:1,popcorn:2" or empty
-  private LocalDateTime reservationTime;
-  private boolean reservationStatus; // false = pending, true = approved
+    private Long id;
+    private Long movieId;
+    private String showtime; // Store the specific showtime string (e.g., "2024-08-15T19:00")
+    private Long userId;
+    private List<String> selectedSeats; // e.g., ["A1", "A2", "C5"]
+    private String beverages; // Simple string for now, e.g., "cocacola:1,popcorn:2" or empty
+    private LocalDateTime reservationTime;
+    private boolean reservationStatus; // false = pending, true = approved
 
-  // Constructors
-  public Reservation() {
-    this.reservationTime = LocalDateTime.now(); // Set timestamp on creation
-    this.reservationStatus = false;
-  }
+    // Constructors
+    public Reservation() {
+        this.reservationTime = LocalDateTime.now(); // Set timestamp on creation
+        this.reservationStatus = false;
+    }
 
-  public Reservation(Long movieId, String showtime, Long userId, List<String> selectedSeats, String beverages) {
-    this(); // Call default constructor to set timestamp
-    this.movieId = movieId;
-    this.showtime = showtime;
-    this.userId = userId;
-    this.selectedSeats = selectedSeats;
-    this.beverages = beverages != null ? beverages : ""; // Ensure beverages is not null
-    this.reservationStatus = false;
-  }
+    public Reservation(Long movieId, String showtime, Long userId, List<String> selectedSeats, String beverages) {
+        this(); // Call default constructor to set timestamp
+        this.movieId = movieId;
+        this.showtime = showtime;
+        this.userId = userId;
+        this.selectedSeats = selectedSeats;
+        this.beverages = beverages != null ? beverages : ""; // Ensure beverages is not null
+        this.reservationStatus = false;
+    }
 
-  // --- Getters and Setters ---
-  public Long getId() {
-    return id;
-  }
+    // --- Getters and Setters ---
+    public Long getId() {
+        return id;
+    }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-  public Long getMovieId() {
-    return movieId;
-  }
+    public Long getMovieId() {
+        return movieId;
+    }
 
-  public void setMovieId(Long movieId) {
-    this.movieId = movieId;
-  }
+    public void setMovieId(Long movieId) {
+        this.movieId = movieId;
+    }
 
-  public String getShowtime() {
-    return showtime;
-  }
+    public String getShowtime() {
+        return showtime;
+    }
 
-  public void setShowtime(String showtime) {
-    this.showtime = showtime;
-  }
+    public void setShowtime(String showtime) {
+        this.showtime = showtime;
+    }
 
-  public Long getUserId() {
-    return userId;
-  }
+    public Long getUserId() {
+        return userId;
+    }
 
-  public void setUserId(Long userId) {
-    this.userId = userId;
-  }
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
-  public List<String> getSelectedSeats() {
-    return selectedSeats;
-  }
+    public List<String> getSelectedSeats() {
+        return selectedSeats;
+    }
 
-  public void setSelectedSeats(List<String> selectedSeats) {
-    this.selectedSeats = selectedSeats;
-  }
+    public void setSelectedSeats(List<String> selectedSeats) {
+        this.selectedSeats = selectedSeats;
+    }
 
-  public String getBeverages() {
-    return beverages;
-  }
+    public String getBeverages() {
+        return beverages;
+    }
 
-  public void setBeverages(String beverages) {
-    this.beverages = beverages;
-  }
+    public void setBeverages(String beverages) {
+        this.beverages = beverages;
+    }
 
-  public LocalDateTime getReservationTime() {
-    return reservationTime;
-  }
+    public LocalDateTime getReservationTime() {
+        return reservationTime;
+    }
 
-  public void setReservationTime(LocalDateTime reservationTime) {
-    this.reservationTime = reservationTime;
-  }
+    public void setReservationTime(LocalDateTime reservationTime) {
+        this.reservationTime = reservationTime;
+    }
 
-  public boolean isReservationStatus() {
-    return reservationStatus;
-  }
+    public boolean isReservationStatus() {
+        return reservationStatus;
+    }
 
-  public void setReservationStatus(boolean reservationStatus) {
-    this.reservationStatus = reservationStatus;
-  }
+    public void setReservationStatus(boolean reservationStatus) {
+        this.reservationStatus = reservationStatus;
+    }
 }
