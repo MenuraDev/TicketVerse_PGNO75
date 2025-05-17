@@ -65,7 +65,20 @@ public class CircularQueue {
         size = 0;
     }
 
-
+    // Method to check if a ticket exists in the queue
+    public boolean contains(int ticketId) {
+        if (isEmpty()) {
+            return false;
+        }
+        int current = front;
+        for (int i = 0; i < size; i++) {
+            if (queue[current] == ticketId) {
+                return true;
+            }
+            current = (current + 1) % capacity;
+        }
+        return false;
+    }
 
     // Method to get all tickets in the queue
     public int[] getAllTickets() {
