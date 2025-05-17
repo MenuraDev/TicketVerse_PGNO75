@@ -49,7 +49,28 @@ public class MovieServlet extends HttpServlet {
                 case "addMovie":
                     request.getRequestDispatcher("/addMovie.jsp").forward(request, response);
                     break;
-
+                    //edit movies, delete, manage
+                case "editMovie":
+                    Long movieId = Long.parseLong(request.getParameter("id"));
+                    Movie movie = movieService.getMovieById(movieId);  // Get movie by ID
+                    if (movie != null) {
+                        request.setAttribute("movie", movie);
+                        request.getRequestDispatcher("/editMovie.jsp").forward(request, response);
+                    } else {
+                        // Handle movie not found (e.g., redirect to manageMovies with an error message)
+                        response.sendRedirect("movie?action=manageMovies&error=MovieNotFound");
+                    }
+                    break;
+                case "deleteMovie":
+                    Long deleteId = Long.parseLong(request.getParameter("id"));
+                    movieService.deleteMovie(deleteId);
+                    response.sendRedirect("movie?action=manageMovies"); // Redirect back to movie list
+                    break;
+                case "manageMovies":
+                    List<Movie> movies = movieService.getAllMovies();
+                    request.setAttribute("movies", movies);
+                    request.getRequestDispatcher("/manageMovies.jsp").forward(request, response);
+                    break;
                 default:
                     response.sendRedirect("admin");
             }
@@ -77,7 +98,9 @@ public class MovieServlet extends HttpServlet {
                 case "saveMovie":
                     saveMovie(request, response);
                     break;
-
+                case "updateMovie":
+                    updateMovie(request, response);  // Handle movie updates
+                    break;
                 default:
                     response.sendRedirect("admin");
             }
@@ -86,7 +109,6 @@ public class MovieServlet extends HttpServlet {
             request.getRequestDispatcher("/adminDashboard.jsp").forward(request,response); // Go back to the form
         }
     }
-
 
 
     private void saveMovie(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -120,6 +142,39 @@ public class MovieServlet extends HttpServlet {
             request.getRequestDispatcher("/addMovie.jsp").forward(request,response); // Go back to the form
         }
     }
+    private void updateMovie(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        Long id = Long.parseLong(request.getParameter("id"));
+        String title = request.getParameter("title");
+        String poster = request.getParameter("poster");
+        String synopsis = request.getParameter("synopsis");
+        String genre = request.getParameter("genre");
+        int duration = Integer.parseInt(request.getParameter("duration"));
+        String rating = request.getParameter("rating");
+        String director = request.getParameter("director");
+        String cast = request.getParameter("cast");
+        String trailerURL = request.getParameter("trailerURL");
+        String movieStatus = request.getParameter("movieStatus"); // Get movie status
+
+        // Get showtimes (same as in saveMovie)
+        String[] showtimesArray = request.getParameterValues("showtimes");
+        List<String> showtimes = new ArrayList<>();
+        if (showtimesArray != null) {
+            showtimes = Arrays.asList(showtimesArray);
+        }
+
+        // Create an updated Movie object
+        Movie updatedMovie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus);
+        updatedMovie.setId(id); // Set the ID, very important!
+
+        try {
+            movieService.updateMovie(updatedMovie); // Update the movie in the service
+            response.sendRedirect("movie?action=manageMovies"); // Redirect to manage movies
+        } catch (IOException e) {
+            request.setAttribute("errorMessage", "Failed to save movie: " + e.getMessage());
+            request.getRequestDispatcher("/editMovie.jsp").forward(request,response); // Go back to the form
+        }
+    }
+
 
 
 }
