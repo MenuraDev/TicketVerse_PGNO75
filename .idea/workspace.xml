@@ -10,6 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="2025/03/29 11:59">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +77,7 @@
     "Smart Tomcat.Tomcat: TicketVerse.executor": "Run",
     "Smart Tomcat.Tomcat: TicketVerse0.executor": "Run",
     "Tomcat Server.Tomcat 9.0.100.executor": "Run",
-    "git-widget-placeholder": "Ahamed-Azib",
+    "git-widget-placeholder": "Nadeesha-Add-released-date",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse",
     "node.js.detected.package.eslint": "true",

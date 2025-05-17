@@ -66,6 +66,21 @@
                     </select>
                 </div>
 
+                <div class="mb-3">
+                    <label for="releaseDate" class="form-label">Release Date:</label>
+                    <input type="date" class="form-control" id="releaseDate" name="releaseDate" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Show Dates and Times:</label>
+                    <div id="showtimes-container">
+                        <div class="showtime-group">
+                            <input type="datetime-local" class="form-control" name="showtimes">
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-secondary mt-2" onclick="addShowtimeField()">Add Show Time</button>
+                </div>
+
                 <button type="submit" class="btn btn-primary">Add Movie</button>
                 <a href="admin" class="btn btn-secondary">Cancel</a>
             </form>
@@ -73,7 +88,21 @@
     </div>
 </div>
 
+<script>
+    function addShowtimeField() {
+        const container = document.getElementById('showtimes-container');
+        const newShowtimeGroup = document.createElement('div');
+        newShowtimeGroup.classList.add('showtime-group');
 
+        const newInput = document.createElement('input');
+        newInput.type = 'datetime-local';
+        newInput.classList.add('form-control');
+        newInput.name = 'showtimes';
+
+        newShowtimeGroup.appendChild(newInput);
+        container.appendChild(newShowtimeGroup);
+    }
+</script>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

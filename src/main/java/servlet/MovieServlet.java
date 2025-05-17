@@ -1,7 +1,7 @@
 package servlet;
 
 import model.Movie;
-//import model.User;
+import model.User;
 import service.MovieService;
 
 import javax.servlet.ServletException;
@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -33,12 +34,12 @@ public class MovieServlet extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
-        /*
+
         if (session == null || session.getAttribute("user") == null || !"admin".equals(((User) session.getAttribute("user")).getRole())) {
             response.sendRedirect("login.jsp"); // Redirect if not admin
             return;
         }
-*/
+
         String action = request.getParameter("action");
         if (action == null) {
             action = "manageMovies"; // Default: Show manageMovies
@@ -86,12 +87,12 @@ public class MovieServlet extends HttpServlet {
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
-        /*
+
         if (session == null || session.getAttribute("user") == null || !"admin".equals(((User) session.getAttribute("user")).getRole())) {
             response.sendRedirect("login.jsp");
             return;
         }
-*/
+
         String action = request.getParameter("action");
         try{
             switch (action) {
@@ -122,6 +123,7 @@ public class MovieServlet extends HttpServlet {
         String cast = request.getParameter("cast");
         String trailerURL = request.getParameter("trailerURL");
         String movieStatus = request.getParameter("movieStatus"); // Get movie status
+        LocalDate releaseDate = LocalDate.parse(request.getParameter("releaseDate"));
 
         // Handle multiple showtimes (important part)
         String[] showtimesArray = request.getParameterValues("showtimes");
@@ -131,7 +133,7 @@ public class MovieServlet extends HttpServlet {
         }
 
 
-        Movie movie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus);
+        Movie movie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes,movieStatus, releaseDate);
 
         try {
             movieService.addMovie(movie);
@@ -174,7 +176,5 @@ public class MovieServlet extends HttpServlet {
             request.getRequestDispatcher("/editMovie.jsp").forward(request,response); // Go back to the form
         }
     }
-
-
 
 }
