@@ -148,16 +148,7 @@
                             <td>
                                 <fmt:formatDate value="${detail.reservationTime}" pattern="MMM d, yyyy, h:mm:ss a" />
                             </td>
-                            <td>
-                                <c:choose>
-                                    <c:when test="${detail.reservationStatus}">
-                                        <span class="badge bg-success">Approved</span>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <span class="badge bg-warning text-dark">Pending</span>
-                                    </c:otherwise>
-                                </c:choose>
-                            </td>
+                            
                                 <%-- <td>
                                     <%-- Example Admin Delete Action Form --%>
                                 <%--
