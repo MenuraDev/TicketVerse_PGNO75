@@ -2,6 +2,7 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %> <%-- For date/time formatting (optional) --%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -57,6 +58,24 @@
                                 <div>
                                     <h6 class="text-uppercase text-muted mb-1">Rating</h6>
                                     <p class="mb-0 fs-5">${movie.rating}/10</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-calendar fs-4 me-3 text-primary"></i>
+                                <div>
+                                    <h6 class="text-uppercase text-muted mb-1">Release Date</h6>
+                                    <p class="mb-0 fs-5">
+                                        <c:choose>
+                                            <c:when test="${not empty movie.releaseDate}">
+                                                <c:set var="releaseDateStr" value="${movie.releaseDate.toString()}" />
+                                                <fmt:parseDate value="${releaseDateStr}" pattern="yyyy-MM-dd" var="parsedDate" />
+                                                <fmt:formatDate value="${parsedDate}" pattern="MMMM d, yyyy" />
+                                            </c:when>
+                                            <c:otherwise>
+                                                Not available
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </p>
                                 </div>
                             </div>
                         </div>

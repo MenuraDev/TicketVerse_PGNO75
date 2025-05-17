@@ -67,6 +67,11 @@
                 </div>
 
                 <div class="mb-3">
+                    <label for="releaseDate" class="form-label">Release Date:</label>
+                    <input type="date" class="form-control" id="releaseDate" name="releaseDate" required>
+                </div>
+
+                <div class="mb-3">
                     <label class="form-label">Show Dates and Times:</label>
                     <div id="showtimes-container">
                         <div class="showtime-group">
