@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ticketAppGroup75:war exploded" />
+      <artifact name="TicketVerse:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Movie ticket reservation function / manageReservations.jsp">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="2025/03/29 11:59">
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +37,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MenuraDev/TicketVerse_PGNO75&quot;,
-    &quot;accountId&quot;: &quot;74126b4f-f7c9-48f4-984e-9244a2b02dbe&quot;
+    &quot;url&quot;: &quot;https://github.com/MenuraDev/TicketVerse_PGNO75.git&quot;,
+    &quot;accountId&quot;: &quot;70582b9b-0936-485b-90fc-66b5f48747ef&quot;
   }
 }</component>
   <component name="LogFilters">
@@ -76,9 +75,9 @@
     "Smart Tomcat.Tomcat: TicketVerse.executor": "Run",
     "Smart Tomcat.Tomcat: TicketVerse0.executor": "Run",
     "Tomcat Server.Tomcat 9.0.100.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Ahamed-Azib",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/PGNO75/TicketVerse",
+    "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,8 +92,6 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse_PGNO75\src\main\webapp" />
-      <recent name="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse_PGNO75\src\main" />
       <recent name="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse0\src\main\webapp\components" />
     </key>
   </component>
@@ -121,6 +118,8 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="c60ead4f-64c9-4ee5-81d1-28556225a904" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1090" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -217,20 +216,20 @@
         </TomcatInfo>
       </option>
       <option name="vmOptions" value="" />
+      <module name="TicketVerse" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Smart Tomcat.Tomcat: TicketVerse" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.100" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -255,8 +254,7 @@
       <workItem from="1746014583957" duration="704000" />
       <workItem from="1746161933769" duration="3595000" />
       <workItem from="1746377532352" duration="239000" />
-      <workItem from="1746380354667" duration="5963000" />
-      <workItem from="1746807893177" duration="760000" />
+      <workItem from="1747467810494" duration="452000" />
     </task>
     <task id="LOCAL-00001" summary="1.000">
       <option name="closed" value="true" />
@@ -330,55 +328,7 @@
       <option name="project" value="LOCAL" />
       <updated>1743229840552</updated>
     </task>
-    <task id="LOCAL-00010" summary="2025/03/29 11:59">
-      <option name="closed" value="true" />
-      <created>1746380470101</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1746380470101</updated>
-    </task>
-    <task id="LOCAL-00011" summary="2025/03/29 11:59">
-      <option name="closed" value="true" />
-      <created>1746380526143</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1746380526143</updated>
-    </task>
-    <task id="LOCAL-00012" summary="2025/05/04 23:17">
-      <option name="closed" value="true" />
-      <created>1746380867823</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1746380867823</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Movie ticket reservation function / manageReservations.jsp">
-      <option name="closed" value="true" />
-      <created>1746431114542</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1746431114542</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Movie ticket reservation function / manageReservations.jsp update">
-      <option name="closed" value="true" />
-      <created>1746431696975</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1746431696975</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Movie ticket reservation function / manageReservations.jsp">
-      <option name="closed" value="true" />
-      <created>1746431832608</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1746431832608</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,10 +354,7 @@
     <MESSAGE value="2025/03/22 15:00" />
     <MESSAGE value="2025/03/22 20:52" />
     <MESSAGE value="2025/03/29 11:59" />
-    <MESSAGE value="2025/05/04 23:17" />
-    <MESSAGE value="Movie ticket reservation function / manageReservations.jsp update" />
-    <MESSAGE value="Movie ticket reservation function / manageReservations.jsp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Movie ticket reservation function / manageReservations.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="2025/03/29 11:59" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
