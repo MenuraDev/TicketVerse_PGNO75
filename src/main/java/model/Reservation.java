@@ -10,7 +10,6 @@ public class Reservation {
   private String showtime; // Store the specific showtime string (e.g., "2024-08-15T19:00")
   private Long userId;
   private List<String> selectedSeats; // e.g., ["A1", "A2", "C5"]
-  private String beverages; // Simple string for now, e.g., "cocacola:1,popcorn:2" or empty
   private LocalDateTime reservationTime;
   private boolean reservationStatus; // false = pending, true = approved
 
@@ -26,7 +25,6 @@ public class Reservation {
     this.showtime = showtime;
     this.userId = userId;
     this.selectedSeats = selectedSeats;
-    this.beverages = beverages != null ? beverages : ""; // Ensure beverages is not null
     this.reservationStatus = false;
   }
 
@@ -69,14 +67,6 @@ public class Reservation {
 
   public void setSelectedSeats(List<String> selectedSeats) {
     this.selectedSeats = selectedSeats;
-  }
-
-  public String getBeverages() {
-    return beverages;
-  }
-
-  public void setBeverages(String beverages) {
-    this.beverages = beverages;
   }
 
   public LocalDateTime getReservationTime() {

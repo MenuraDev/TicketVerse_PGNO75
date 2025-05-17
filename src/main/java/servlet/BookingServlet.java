@@ -32,9 +32,7 @@ public class BookingServlet extends HttpServlet {
   @Override
   public void init() throws ServletException {
     super.init();
-    String movieFilePath = getServletContext().getRealPath("/WEB-INF/database/movies.txt");
     movieService = new MovieService(movieFilePath);
-    String reservationFilePath = getServletContext().getRealPath("/WEB-INF/database/reservations.txt");
     reservationService = new ReservationService(reservationFilePath);
     // Ensure UserService is initialized if needed later, or get user from session
   }
