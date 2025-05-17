@@ -1,5 +1,6 @@
 package model;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class Movie {
@@ -15,13 +16,14 @@ public class Movie {
     private String trailerURL; // Optional
     private List<String> showtimes; // List of show date/time strings
     private String movieStatus; // New field: "Coming Soon" or "Now Showing"
-
+    private LocalDate releaseDate; // New field for movie release date
 
     // Constructors
     public Movie() {}
 
     public Movie(String title, String poster, String synopsis, String genre, int duration,
-                 String rating, String director, String cast, String trailerURL, List<String> showtimes,String movieStatus) {
+                 String rating, String director, String cast, String trailerURL, List<String> showtimes,
+                 String movieStatus, LocalDate releaseDate) {
         this.title = title;
         this.poster = poster;
         this.synopsis = synopsis;
@@ -33,6 +35,7 @@ public class Movie {
         this.trailerURL = trailerURL;
         this.showtimes = showtimes;
         this.movieStatus = movieStatus;
+        this.releaseDate = releaseDate;
     }
 
     // Getters and setters (all fields)
@@ -128,5 +131,13 @@ public class Movie {
 
     public void setShowtimes(List<String> showtimes) {
         this.showtimes = showtimes;
+    }
+
+    public LocalDate getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(LocalDate releaseDate) {
+        this.releaseDate = releaseDate;
     }
 }

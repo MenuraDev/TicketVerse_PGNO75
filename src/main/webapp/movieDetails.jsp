@@ -77,42 +77,6 @@
 
                         <hr class="my-5 border-primary border-opacity-50">
 
-                        <c:if test="${movie.movieStatus == 'Now Showing'}">
-                            <div class="showtimes mb-5">
-                                <h4 class="text-primary mb-4">Available Showtimes</h4>
-                                <div class="d-flex flex-wrap gap-3">
-                                    <c:forEach items="${movie.showtimes}" var="showtime">
-                                        <div class="showtime-item bg-light p-3 rounded-3 shadow-sm">
-                                            <i class="fas fa-calendar-alt me-2 text-primary"></i>
-                                                <%-- Format the showtime --%>
-                                            <fmt:parseDate value="${showtime}" pattern="yyyy-MM-dd'T'HH:mm" var="parsedShowtime" />
-                                            <span class="fw-semibold">
-                                                <fmt:formatDate value="${parsedShowtime}" pattern="EEEE, MMMM d 'at' h:mm a" />
-                                            </span>
-                                                <%-- Only show Book Now if user is logged in --%>
-                                            <c:if test="${not empty sessionScope.user}">
-                                                <%-- Encode the showtime parameter for the URL --%>
-                                                <c:url var="bookUrl" value="book-tickets">
-                                                    <c:param name="movieId" value="${movie.id}" />
-                                                    <c:param name="showtime" value="${showtime}" />
-                                                    <%-- userId will be retrieved from session in the servlet --%>
-                                                </c:url>
-                                                <a href="${bookUrl}" class="btn btn-sm btn-success ms-3">
-                                                    <i class="fas fa-ticket-alt me-1"></i> Book Now
-                                                </a>
-                                            </c:if>
-                                            <c:if test="${empty sessionScope.user}">
-                                                <a href="login.jsp?redirect=movie-details?id=${movie.id}" class="btn btn-sm btn-outline-secondary ms-3 disabled" title="Login to Book">
-                                                    <i class="fas fa-ticket-alt me-1"></i> Book Now (Login Required)
-                                                </a>
-                                                <%-- Alternatively, disable or hide the button --%>
-                                                <%-- <button class="btn btn-sm btn-success ms-3" disabled>Book Now (Login Required)</button> --%>
-                                            </c:if>
-                                        </div>
-                                    </c:forEach>
-                                </div>
-                            </div>
-                        </c:if>
 
                         <c:if test="${not empty movie.trailerURL}">
                             <div class="trailer ratio ratio-16x9 rounded-4 overflow-hidden">
@@ -131,65 +95,10 @@
                 </div>
             </div>
         </c:when>
-        <c:otherwise>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <h4 class="alert-heading d-flex align-items-center">
-                    <i class="fas fa-exclamation-triangle me-2 fs-3"></i> Error Loading Movie
-                </h4>
-                <p class="mb-0">${not empty errorMessage ? errorMessage : 'Could not retrieve movie details.'}</p>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                <div class="mt-3">
-                    <a href="movies" class="btn btn-outline-danger">
-                        <i class="fas fa-arrow-left me-2"></i> Back to Movies
-                    </a>
-                </div>
-            </div>
-        </c:otherwise>
     </c:choose>
 </main>
 
-<style>
-    /* Custom CSS Enhancements */
-    .poster-wrapper {
-        height: 500px;
-    }
 
-    .hover-scale:hover {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
-
-    .details-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-    }
-
-    .showtime-item {
-        transition: all 0.3s ease;
-    }
-
-    .showtime-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-    }
-
-    .badge-gradient {
-        background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-        color: white !important;
-    }
-
-    .trailer iframe {
-        border: 5px solid #fff;
-        box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-
-    @media (max-width: 768px) {
-        .details-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
 
 <%@ include file="components/footer.jsp" %>
 
