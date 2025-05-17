@@ -50,6 +50,7 @@ public class MovieServlet extends HttpServlet {
                     request.getRequestDispatcher("/addMovie.jsp").forward(request, response);
                     break;
 
+
                 default:
                     response.sendRedirect("admin");
             }

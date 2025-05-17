@@ -119,6 +119,8 @@ public class MovieService {
                 .orElse(0L) + 1;
     }
 
+
+
     public Movie getMovieById(Long id) throws IOException {
         List<Movie> movies = getAllMovies();
         for (Movie movie : movies){
@@ -128,7 +130,28 @@ public class MovieService {
         }
         return null;
     }
+//implement update movies and delete
 
+    public void updateMovie(Movie updatedMovie) throws IOException {
+        synchronized (lock) {
+            List<Movie> movies = getAllMovies();
+            for (int i = 0; i < movies.size(); i++) {
+                if (movies.get(i).getId().equals(updatedMovie.getId())) {
+                    movies.set(i, updatedMovie);
+                    break;
+                }
+            }
+            saveAllMovies(movies);
+        }
+    }
+
+    public void deleteMovie(Long movieId) throws IOException {
+        synchronized (lock){
+            List<Movie> movies = getAllMovies();
+            movies.removeIf(movie -> movie.getId().equals(movieId));
+            saveAllMovies(movies);
+        }
+    }
 
 
 }
