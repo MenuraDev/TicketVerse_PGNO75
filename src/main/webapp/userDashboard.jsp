@@ -38,6 +38,42 @@
         <a href="${pageContext.request.contextPath}/home" class="btn btn-secondary"><i class="fas fa-home me-1"></i> Back to Home</a>
         <a href="movies" class="btn btn-primary"><i class="fas fa-film me-1"></i> Book Another Movie</a>
     </div>
+    <c:forEach items="${reservationDetails}" var="detail">
+        <tr>
+            <td>${detail.movieTitle}</td>
+            <td>
+                    <%-- Parse the showtime string and format it --%>
+                <fmt:parseDate value="${detail.showtime}" pattern="yyyy-MM-dd'T'HH:mm" var="parsedShowtime" />
+                <fmt:formatDate value="${parsedShowtime}" pattern="MMM d, yyyy 'at' h:mm a" />
+            </td>
+            <td>${detail.seats}</td>
+            <td>
+                    <%-- Format the java.util.Date reservation time --%>
+                <fmt:formatDate value="${detail.reservationTime}" pattern="MMM d, yyyy, h:mm a" />
+            </td>
+            <td>
+                <c:choose>
+                    <c:when test="${detail.reservationStatus}">
+                        <span class="badge bg-success">Approved</span>
+                    </c:when>
+                    <c:otherwise>
+                        <span class="badge bg-warning text-dark">Pending</span>
+                    </c:otherwise>
+                </c:choose>
+            </td>
+            <td>
+                    <%-- Form for the Cancel Button --%>
+                <form action="dashboard" method="post" style="display: inline;"> <%-- Use POST --%>
+                    <input type="hidden" name="action" value="cancelReservation">
+                    <input type="hidden" name="reservationId" value="${detail.id}"> <%-- Use the reservation ID --%>
+                    <button type="submit" class="btn btn-sm btn-danger"
+                            onclick="return confirm('Are you sure you want to cancel this reservation?');">
+                        <i class="fas fa-times me-1"></i> Cancel
+                    </button>
+                </form>
+            </td>
+        </tr>
+    </c:forEach>
 
 </div>
 
