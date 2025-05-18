@@ -1,19 +1,17 @@
 //In service/UserService.java
 package service;
 
+import model.User;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import model.User;
 
 public class UserService {
     private static final String DELIMITER = "||";
@@ -49,12 +47,12 @@ public class UserService {
 
     public boolean usernameExists(String username) throws IOException {
         return getAllUsers().stream()
-                .anyMatch(u -> u.getUsername().equalsIgnoreCase(username));
+            .anyMatch(u -> u.getUsername().equalsIgnoreCase(username));
     }
 
     public boolean emailExists(String email) throws IOException {
         return getAllUsers().stream()
-                .anyMatch(u -> u.getEmail().equalsIgnoreCase(email));
+            .anyMatch(u -> u.getEmail().equalsIgnoreCase(email));
     }
     public List<User> getAllUsers() throws IOException {
         if (!Files.exists(usersFilePath)) {
@@ -62,9 +60,9 @@ public class UserService {
         }
         try {
             return Files.readAllLines(usersFilePath, StandardCharsets.UTF_8)
-                    .stream()
-                    .map(this::parseUser)
-                    .collect(Collectors.toList());
+                .stream()
+                .map(this::parseUser)
+                .collect(Collectors.toList());
         } catch (IOException e){
             throw new IOException("Failed to get all users", e);
         }
@@ -72,20 +70,63 @@ public class UserService {
 
     private void saveAllUsers(List<User> users) throws IOException {
         List<String> lines = users.stream()
-                .map(this::formatUser)
-                .collect(Collectors.toList());
+            .map(this::formatUser)
+            .collect(Collectors.toList());
 
         try {
             Files.write(usersFilePath, lines, StandardCharsets.UTF_8,
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.TRUNCATE_EXISTING);
+                StandardOpenOption.CREATE,
+                StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e){
             throw new IOException("Failed to save all users", e);
         }
 
     }
 
+    private User parseUser(String line) {
+        String[] parts = line.split("\\Q" + DELIMITER + "\\E");
+        User user = new User();
+        user.setId(Long.parseLong(parts[0]));
+        user.setUsername(parts[1]);
+        user.setPasswordHash(parts[2]);
+        user.setEmail(parts[3]);
+        user.setFirstName(parts[4]);
+        user.setLastName(parts[5]);
+        user.setCreatedAt(LocalDateTime.parse(parts[6]));
+        user.setUpdatedAt(LocalDateTime.parse(parts[7]));
+        user.setRole(parts[8]); // Parse the role
+        return user;
+    }
 
+    private String formatUser(User user) {
+        return String.join(DELIMITER,
+            user.getId().toString(),
+            user.getUsername(),
+            user.getPasswordHash(),
+            user.getEmail(),
+            user.getFirstName(),
+            user.getLastName(),
+            user.getCreatedAt().toString(),
+            user.getUpdatedAt().toString(),
+            user.getRole()); // Format the role
+    }
+
+    private long getNextUserId(List<User> users) {
+        return users.stream()
+            .mapToLong(User::getId)
+            .max()
+            .orElse(0L) + 1;
+    }
+
+    public static String hashPassword(String password) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
+            byte[] hash = md.digest(password.getBytes(StandardCharsets.UTF_8));
+            return bytesToHex(hash);
+        } catch (NoSuchAlgorithmException e) {
+            throw new RuntimeException("Error hashing password", e); // More specific exception
+        }
+    }
 
     private static String bytesToHex(byte[] hash) {
         StringBuilder hexString = new StringBuilder(2 * hash.length);
@@ -103,7 +144,7 @@ public class UserService {
         List<User> users = getAllUsers();
         for (User user : users) {
             if (user.getUsername().equalsIgnoreCase(username) &&
-                    UserService.hashPassword(password).equals(user.getPasswordHash())) {
+                UserService.hashPassword(password).equals(user.getPasswordHash())) {
                 return user; // Return the user object if credentials match
             }
         }
