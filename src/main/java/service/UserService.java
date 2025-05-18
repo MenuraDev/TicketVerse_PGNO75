@@ -47,12 +47,12 @@ public class UserService {
 
     public boolean usernameExists(String username) throws IOException {
         return getAllUsers().stream()
-            .anyMatch(u -> u.getUsername().equalsIgnoreCase(username));
+                .anyMatch(u -> u.getUsername().equalsIgnoreCase(username));
     }
 
     public boolean emailExists(String email) throws IOException {
         return getAllUsers().stream()
-            .anyMatch(u -> u.getEmail().equalsIgnoreCase(email));
+                .anyMatch(u -> u.getEmail().equalsIgnoreCase(email));
     }
     public List<User> getAllUsers() throws IOException {
         if (!Files.exists(usersFilePath)) {
@@ -60,9 +60,9 @@ public class UserService {
         }
         try {
             return Files.readAllLines(usersFilePath, StandardCharsets.UTF_8)
-                .stream()
-                .map(this::parseUser)
-                .collect(Collectors.toList());
+                    .stream()
+                    .map(this::parseUser)
+                    .collect(Collectors.toList());
         } catch (IOException e){
             throw new IOException("Failed to get all users", e);
         }
@@ -70,13 +70,13 @@ public class UserService {
 
     private void saveAllUsers(List<User> users) throws IOException {
         List<String> lines = users.stream()
-            .map(this::formatUser)
-            .collect(Collectors.toList());
+                .map(this::formatUser)
+                .collect(Collectors.toList());
 
         try {
             Files.write(usersFilePath, lines, StandardCharsets.UTF_8,
-                StandardOpenOption.CREATE,
-                StandardOpenOption.TRUNCATE_EXISTING);
+                    StandardOpenOption.CREATE,
+                    StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e){
             throw new IOException("Failed to save all users", e);
         }
@@ -100,22 +100,22 @@ public class UserService {
 
     private String formatUser(User user) {
         return String.join(DELIMITER,
-            user.getId().toString(),
-            user.getUsername(),
-            user.getPasswordHash(),
-            user.getEmail(),
-            user.getFirstName(),
-            user.getLastName(),
-            user.getCreatedAt().toString(),
-            user.getUpdatedAt().toString(),
-            user.getRole()); // Format the role
+                user.getId().toString(),
+                user.getUsername(),
+                user.getPasswordHash(),
+                user.getEmail(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getCreatedAt().toString(),
+                user.getUpdatedAt().toString(),
+                user.getRole()); // Format the role
     }
 
     private long getNextUserId(List<User> users) {
         return users.stream()
-            .mapToLong(User::getId)
-            .max()
-            .orElse(0L) + 1;
+                .mapToLong(User::getId)
+                .max()
+                .orElse(0L) + 1;
     }
 
     public static String hashPassword(String password) {
@@ -144,7 +144,7 @@ public class UserService {
         List<User> users = getAllUsers();
         for (User user : users) {
             if (user.getUsername().equalsIgnoreCase(username) &&
-                UserService.hashPassword(password).equals(user.getPasswordHash())) {
+                    UserService.hashPassword(password).equals(user.getPasswordHash())) {
                 return user; // Return the user object if credentials match
             }
         }
