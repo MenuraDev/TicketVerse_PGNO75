@@ -1,6 +1,8 @@
 //In service/UserService.java
 package service;
 
+import model.User;
+
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
@@ -10,7 +12,6 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import model.User;
 
 public class UserService {
     private static final String DELIMITER = "||";

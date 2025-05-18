@@ -5,6 +5,8 @@ import model.Movie;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,6 +15,7 @@ import java.util.stream.Collectors;
 public class MovieService {
 
     private static final String DELIMITER = "||";
+    private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ISO_LOCAL_DATE;
     private final Path moviesFilePath;
     private final Object lock = new Object();
 
@@ -85,15 +88,19 @@ public class MovieService {
         movie.setDirector(parts[7]);
         movie.setCast(parts[8]);
         movie.setTrailerURL(parts[9]);
-        // Showtimes are stored as a comma-separated string within the larger delimited string.
         movie.setShowtimes(Arrays.asList(parts[10].split(",")));
-        movie.setMovieStatus(parts[11]); // Parse movieStatus
+        movie.setMovieStatus(parts[11]);
+        // Parse release date if it exists
+        if (parts.length > 12 && !parts[12].isEmpty()) {
+            movie.setReleaseDate(LocalDate.parse(parts[12], DATE_FORMATTER));
+        }
         return movie;
     }
 
     private String formatMovie(Movie movie) {
-        // Join the showtimes list into a single comma-separated string.
         String showtimesString = String.join(",", movie.getShowtimes());
+        String releaseDateString = movie.getReleaseDate() != null ? 
+            movie.getReleaseDate().format(DATE_FORMATTER) : "";
 
         return String.join(DELIMITER,
                 movie.getId().toString(),
@@ -106,8 +113,9 @@ public class MovieService {
                 movie.getDirector(),
                 movie.getCast(),
                 movie.getTrailerURL(),
-                showtimesString, // Use the comma-separated showtimes string
-                movie.getMovieStatus() // Format movieStatus
+                showtimesString,
+                movie.getMovieStatus(),
+                releaseDateString
         );
     }
 
@@ -118,20 +126,6 @@ public class MovieService {
                 .max()
                 .orElse(0L) + 1;
     }
-
-
-
-    public Movie getMovieById(Long id) throws IOException {
-        List<Movie> movies = getAllMovies();
-        for (Movie movie : movies){
-            if(movie.getId().equals(id)){
-                return movie;
-            }
-        }
-        return null;
-    }
-//implement update movies and delete
-
     public void updateMovie(Movie updatedMovie) throws IOException {
         synchronized (lock) {
             List<Movie> movies = getAllMovies();
@@ -152,6 +146,13 @@ public class MovieService {
             saveAllMovies(movies);
         }
     }
-
-
+    public Movie getMovieById(Long id) throws IOException {
+        List<Movie> movies = getAllMovies();
+        for (Movie movie : movies){
+            if(movie.getId().equals(id)){
+                return movie;
+            }
+        }
+        return null;
+    }
 }

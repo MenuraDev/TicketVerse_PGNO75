@@ -9,27 +9,200 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="2025/03/29 11:59">
+    <list default="true" id="7911fd5e-d59d-44fb-ac5a-07de9c050d37" name="Changes" comment="User Management updated from main">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/Catalina/localhost/TicketVerse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/catalina.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/catalina.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/jaspic-providers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/jaspic-providers.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/server.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/tomcat-users.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/tomcat-users.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/conf/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-03-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-04-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-04-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-05-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-05-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-03-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-04-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-04-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-05-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/host-manager.2025-05-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-03-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-04-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-04-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-05-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost.2025-05-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-20.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-21.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-22.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-23.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-24.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-25.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-26.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-27.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-28.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-29.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-30.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-03-31.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-04-02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-04-30.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-05-02.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/localhost_access_log.2025-05-17.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-20.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-21.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-22.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-23.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-25.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-26.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-27.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-29.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-03-31.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-04-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-04-30.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-05-02.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/logs/manager.2025-05-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/SESSIONS.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/addMovie_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/addMovie_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/adminDashboard_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/adminDashboard_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/allMovies_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/allMovies_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/comingSoon_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/comingSoon_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/editMovie_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/editMovie_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/index_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/login_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/login_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/manageMovies_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/manageMovies_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/manageReservations_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/manageReservations_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/movieDetails_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/movieDetails_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/nowShowing_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/nowShowing_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse0/SESSIONS.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/Catalina/localhost/TicketVerse.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/catalina.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/catalina.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/jaspic-providers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/jaspic-providers.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/server.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/tomcat-users.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/tomcat-users.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/catalina.2025-05-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/catalina.2025-05-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/host-manager.2025-05-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/host-manager.2025-05-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/localhost.2025-05-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/localhost.2025-05-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/localhost_access_log.2025-05-15.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/localhost_access_log.2025-05-16.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/manager.2025-05-15.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/manager.2025-05-16.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/AdminServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LoginServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/LogoutServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/RegisterServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/utils/CookieUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/users.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/addUser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/comingSoon.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/editUser.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/manageUsers.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/adminDashboard_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/adminDashboard_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/allMovies_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/allMovies_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/bookTickets_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/bookTickets_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/index_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/index_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/login_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/login_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/manageReservations_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/manageReservations_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/movieDetails_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/movieDetails_jsp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/userDashboard_jsp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/work/Catalina/localhost/TicketVerse/org/apache/jsp/userDashboard_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/BookingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/BookingServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/IndexServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MovieListingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MovieListingServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/movies.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/movies.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/reservations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/reservations.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addMovie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/components/movieCard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/components/movieCard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editMovie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/manageReservations.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/manageReservations.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movieDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/userDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userDashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Jsp File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -37,12 +210,19 @@
     &quot;assignee&quot;: &quot;MenuraDev&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="ccf3ce5f-9d0c-4836-a2e4-f250be2a8807" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/MenuraDev/TicketVerse_PGNO75.git&quot;,
-    &quot;accountId&quot;: &quot;70582b9b-0936-485b-90fc-66b5f48747ef&quot;
+    &quot;url&quot;: &quot;https://github.com/MenuraDev/TicketVerse.git&quot;,
+    &quot;accountId&quot;: &quot;74126b4f-f7c9-48f4-984e-9244a2b02dbe&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -50,20 +230,10 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="2uaMpnqwrG97WYpOCV4SDsjmFim" />
+  <component name="ProjectId" id="2wZWlJHsPyIOCseLexq5tUtjJph" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -71,15 +241,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Smart Tomcat.Tomcat: TicketVerse.executor": "Run",
-    "Smart Tomcat.Tomcat: TicketVerse0.executor": "Run",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Smart Tomcat.Unnamed.executor": "Run",
+    "TomEE Server.TomEE 11.0.4.executor": "Run",
+    "TomEE Server.Unnamed.executor": "Run",
+    "Tomcat Server.Tomcat 11.0.4.executor": "Run",
     "Tomcat Server.Tomcat 9.0.100.executor": "Run",
-    "git-widget-placeholder": "Nadeesha-Add-released-date",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse",
+    "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse_PGNO75/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,128 +265,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse0\src\main\webapp\components" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.100">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="ticketAppGroup75" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="ticketAppGroup75" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Tomcat 9.0.100" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.100" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="TicketVerse:war exploded">
-          <settings>
-            <option name="CONTEXT_PATH" value="/TicketVerse_war_exploded" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="c60ead4f-64c9-4ee5-81d1-28556225a904" />
-        <option name="HTTP_PORT" value="8081" />
-        <option name="JNDI_PORT" value="1090" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="8106" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="ticketAppGroup75:war exploded" />
-          <artifact name="TicketVerse:war exploded" />
-        </option>
-      </method>
-    </configuration>
-    <configuration name="Tomcat: TicketVerse" type="com.poratu.idea.plugins.tomcat">
+  <component name="RunManager">
+    <configuration name="Unnamed" type="com.poratu.idea.plugins.tomcat" nameIsGenerated="true">
       <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
       <predefined_log_file enabled="true" id="Tomcat Access Log" />
       <predefined_log_file id="Tomcat Catalina Log" />
       <predefined_log_file id="Tomcat Manager Log" />
       <predefined_log_file id="Tomcat Host Manager Log" />
-      <option name="catalinaBase" value="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse\Tomcat" />
+      <option name="adminPort" value="8006" />
+      <option name="catalinaBase" value="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse_PGNO75\Tomcat" />
       <option name="contextPath" value="/TicketVerse" />
-      <option name="docBase" value="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse\src\main\webapp" />
+      <option name="docBase" value="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse_PGNO75\src\main\webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
       <option name="extraClassPath" value="" />
-      <option name="port" value="8880" />
+      <option name="port" value="8808" />
       <option name="tomcatInfo">
         <TomcatInfo>
           <option name="name" value="Apache Tomcat/9.0.100" />
-          <option name="path" value="$PROJECT_DIR$/../../../../Program Files/Apache Software Foundation/Tomcat 9.0" />
+          <option name="path" value="$PROJECT_DIR$/../../../../../../../../Program Files/Apache Software Foundation/Tomcat 9.0" />
           <option name="version" value="9.0.100.0" />
         </TomcatInfo>
       </option>
@@ -223,149 +294,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Tomcat Server.Tomcat 9.0.100" />
-    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="" />
-      <created>1742482421005</created>
+      <changelist id="7911fd5e-d59d-44fb-ac5a-07de9c050d37" name="Changes" comment="" />
+      <created>1746249726461</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1742482421005</updated>
-      <workItem from="1742482421529" duration="17298000" />
-      <workItem from="1742536905016" duration="225000" />
-      <workItem from="1742610083148" duration="28689000" />
-      <workItem from="1742729694342" duration="965000" />
-      <workItem from="1742730898778" duration="56651000" />
-      <workItem from="1743222449346" duration="7272000" />
-      <workItem from="1743251014014" duration="36035000" />
-      <workItem from="1743424171657" duration="884000" />
-      <workItem from="1743564217947" duration="584000" />
-      <workItem from="1746014293043" duration="217000" />
-      <workItem from="1746014583957" duration="704000" />
-      <workItem from="1746161933769" duration="3595000" />
-      <workItem from="1746377532352" duration="239000" />
-      <workItem from="1747467810494" duration="452000" />
+      <updated>1746249726461</updated>
+      <workItem from="1746249727866" duration="2426000" />
+      <workItem from="1746254322712" duration="2980000" />
+      <workItem from="1746290329251" duration="3496000" />
+      <workItem from="1746295376291" duration="38000" />
+      <workItem from="1746295429802" duration="25000" />
+      <workItem from="1746295465446" duration="32000" />
+      <workItem from="1746295559341" duration="3111000" />
+      <workItem from="1746332384629" duration="1472000" />
+      <workItem from="1746352694466" duration="2287000" />
+      <workItem from="1746363049944" duration="42000" />
+      <workItem from="1747305790725" duration="9878000" />
+      <workItem from="1747455915831" duration="1246000" />
+      <workItem from="1747459517362" duration="21000" />
+      <workItem from="1747459605864" duration="5252000" />
+      <workItem from="1747485868767" duration="1198000" />
+      <workItem from="1747544052151" duration="2796000" />
     </task>
-    <task id="LOCAL-00001" summary="1.000">
-      <option name="closed" value="true" />
-      <created>1742484889501</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1742484889501</updated>
-    </task>
-    <task id="LOCAL-00002" summary="1.000">
-      <option name="closed" value="true" />
-      <created>1742485006358</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742485006358</updated>
-    </task>
-    <task id="LOCAL-00003" summary="1.001">
-      <option name="closed" value="true" />
-      <created>1742527202721</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1742527202721</updated>
-    </task>
-    <task id="LOCAL-00004" summary="2025/03/21 10:04">
-      <option name="closed" value="true" />
-      <created>1742531873857</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1742531873857</updated>
-    </task>
-    <task id="LOCAL-00005" summary="2025/03/21 11:32">
-      <option name="closed" value="true" />
-      <created>1742537046984</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1742537046984</updated>
-    </task>
-    <task id="LOCAL-00006" summary="2025/03/22 11:28">
-      <option name="closed" value="true" />
-      <created>1742623113317</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1742623113317</updated>
-    </task>
-    <task id="LOCAL-00007" summary="2025/03/22 15:00">
-      <option name="closed" value="true" />
-      <created>1742635792483</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1742635792483</updated>
-    </task>
-    <task id="LOCAL-00008" summary="2025/03/22 20:52">
-      <option name="closed" value="true" />
-      <created>1742657022960</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1742657022960</updated>
-    </task>
-    <task id="LOCAL-00009" summary="2025/03/29 11:59">
-      <option name="closed" value="true" />
-      <created>1743229840552</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1743229840552</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.000" />
-    <MESSAGE value="1.001" />
-    <MESSAGE value="2025/03/21 10:04" />
-    <MESSAGE value="2025/03/21 11:32" />
-    <MESSAGE value="2025/03/22 11:28" />
-    <MESSAGE value="2025/03/22 15:00" />
-    <MESSAGE value="2025/03/22 20:52" />
-    <MESSAGE value="2025/03/29 11:59" />
-    <option name="LAST_COMMIT_MESSAGE" value="2025/03/29 11:59" />
+    <MESSAGE value="User Management updated from main" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Management updated from main" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.IOException" package="java.io" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
