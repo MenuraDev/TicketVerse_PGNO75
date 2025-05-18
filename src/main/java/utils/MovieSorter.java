@@ -31,6 +31,7 @@ public class MovieSorter {
                         break;
                     }
                 } else if (movieDate == null) {
+                    // If current movie date is null, move it to the end
                     break;
                 } else {
                     // Both dates are non-null, compare them

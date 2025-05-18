@@ -3,6 +3,7 @@ package model;
 import java.util.List;
 import java.time.LocalDate;
 
+// Movie class to store movie information
 public class Movie {
     private Long id;
     private String title;
@@ -19,20 +20,22 @@ public class Movie {
     private LocalDate releaseDate; // New field for movie release date
 
     // Constructors
+    // Default constructor
     public Movie() {}
 
+    // Parameterized constructor
     public Movie(String title, String poster, String synopsis, String genre, int duration,
                  String rating, String director, String cast, String trailerURL, List<String> showtimes,
                  String movieStatus, LocalDate releaseDate) {
         this.title = title;
         this.poster = poster;
-        this.synopsis = synopsis;
-        this.genre = genre;
-        this.duration = duration;
-        this.rating = rating;
-        this.director = director;
-        this.cast = cast;
-        this.trailerURL = trailerURL;
+        this.synopsis = synopsis; //description of the movie
+        this.genre = genre; //genre of the movie
+        this.duration = duration; //duration of the movie
+        this.rating = rating; //rating of the movie
+        this.director = director; //director of the movie
+        this.cast = cast; //cast of the movie
+        this.trailerURL = trailerURL; //trailer URL of the movie
         this.showtimes = showtimes;
         this.movieStatus = movieStatus;
         this.releaseDate = releaseDate;
