@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="implement user model" />
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="User Management user model updated" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +42,7 @@
   }
 }</component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="765ebd8a-bda7-454e-8e24-c149ea0bf911" />
+    <option name="defaultAccountId" value="ccf3ce5f-9d0c-4836-a2e4-f250be2a8807" />
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -483,7 +483,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747545708897</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="User Management user model updated">
+      <option name="closed" value="true" />
+      <created>1747546766974</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1747546766974</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +530,8 @@
     <MESSAGE value="Movie ticket reservation added delete reservation function to user" />
     <MESSAGE value="Movie ticket reservation added delete reservation function to user updated" />
     <MESSAGE value="implement user model" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement user model" />
+    <MESSAGE value="User Management user model updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Management user model updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
