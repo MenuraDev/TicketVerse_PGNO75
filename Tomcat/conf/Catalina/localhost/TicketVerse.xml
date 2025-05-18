@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context docBase="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse_PGNO75\src\main\webapp">
+  <Resources cacheMaxSize="10240">
+    <PreResources base="C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse_PGNO75/target/classes" className="org.apache.catalina.webresources.DirResourceSet" webAppMount="/WEB-INF/classes"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/jakarta/servlet/jsp/jstl/jakarta.servlet.jsp.jstl-api/2.0.0-RC1/jakarta.servlet.jsp.jstl-api-2.0.0-RC1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-2.0.0-RC1.jar"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/jakarta/servlet/jakarta.servlet-api/5.0.0-M1/jakarta.servlet-api-5.0.0-M1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jakarta.servlet-api-5.0.0-M1.jar"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/jakarta/el/jakarta.el-api/4.0.0-RC1/jakarta.el-api-4.0.0-RC1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jakarta.el-api-4.0.0-RC1.jar"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/3.0.0-RC1/jakarta.xml.bind-api-3.0.0-RC1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jakarta.xml.bind-api-3.0.0-RC1.jar"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/jakarta/activation/jakarta.activation-api/2.0.0-rc1/jakarta.activation-api-2.0.0-rc1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jakarta.activation-api-2.0.0-rc1.jar"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/jstl-1.2.jar"/>
+    <PostResources base="C:/Users/Menura Lakvindu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar" className="org.apache.catalina.webresources.FileResourceSet" webAppMount="/WEB-INF/lib/gson-2.10.1.jar"/>
+  </Resources>
+</Context>

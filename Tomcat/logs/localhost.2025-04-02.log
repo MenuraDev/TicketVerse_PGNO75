@@ -1,0 +1,3 @@
+02-Apr-2025 08:56:45.527 INFO [http-nio-8880-exec-7] org.apache.catalina.core.ApplicationContext.log UserService initialized with path: C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse\src\main\webapp\WEB-INF\database\users.txt
+02-Apr-2025 08:56:45.529 INFO [http-nio-8880-exec-7] org.apache.catalina.core.ApplicationContext.log MovieService initialized with path: C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse\src\main\webapp\WEB-INF\database\movies.txt
+02-Apr-2025 08:56:45.530 INFO [http-nio-8880-exec-7] org.apache.catalina.core.ApplicationContext.log ReservationService initialized with path: C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse\src\main\webapp\WEB-INF\database\reservations.txt

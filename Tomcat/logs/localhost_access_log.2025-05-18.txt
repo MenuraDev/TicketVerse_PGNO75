@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:04:18 +0530] "GET /TicketVerse HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:04:22 +0530] "GET /TicketVerse/ HTTP/1.1" 200 24960
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:04:23 +0530] "GET /favicon.ico HTTP/1.1" 404 683
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:17 +0530] "GET /TicketVerse HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:21 +0530] "GET /TicketVerse/ HTTP/1.1" 200 24960
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:23 +0530] "GET /TicketVerse/login.jsp HTTP/1.1" 200 1939
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:27 +0530] "POST /TicketVerse/login HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:27 +0530] "GET /TicketVerse/home HTTP/1.1" 200 25389
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:29 +0530] "GET /TicketVerse/dashboard HTTP/1.1" 200 4060
+0:0:0:0:0:0:0:1 - - [18/May/2025:12:17:31 +0530] "GET /TicketVerse/admin?action=manageReservations HTTP/1.1" 200 20116
