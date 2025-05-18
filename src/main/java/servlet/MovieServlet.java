@@ -1,9 +1,7 @@
 package servlet;
-
 import model.Movie;
 import model.User;
 import service.MovieService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
