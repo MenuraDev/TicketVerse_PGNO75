@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="Movie ticket reservation added delete reservation function to user updated">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="97b72b31-4152-4c87-9edf-e5dbd011a97c" name="Changes" comment="implement user model" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,8 +113,8 @@
       <recent name="C:\Users\Menura Lakvindu\IdeaProjects\TicketVerse0\src\main\webapp\components" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="utils" />
       <recent name="model" />
+      <recent name="utils" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.100">
@@ -477,7 +475,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747468684477</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="implement user model">
+      <option name="closed" value="true" />
+      <created>1747545708897</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1747545708897</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +521,8 @@
     <MESSAGE value="Movie ticket reservation added delete reservation function to user modified" />
     <MESSAGE value="Movie ticket reservation added delete reservation function to user" />
     <MESSAGE value="Movie ticket reservation added delete reservation function to user updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Movie ticket reservation added delete reservation function to user updated" />
+    <MESSAGE value="implement user model" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement user model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
