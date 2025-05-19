@@ -10,19 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7911fd5e-d59d-44fb-ac5a-07de9c050d37" name="Changes" comment="User Management updated from Hari">
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Reservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ReservationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/BookingServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/conf/Catalina/localhost/TicketVerse.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/conf/Catalina/localhost/TicketVerse.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-05-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/Tomcat/logs/catalina.2025-05-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/index_jsp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tomcat/work/Catalina/localhost/TicketVerse/org/apache/jsp/index_jsp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/reservations.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/database/reservations.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/bookTickets.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/bookTickets.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/userDashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/userDashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/MovieServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/layout/footer.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +60,7 @@
     "TomEE Server.Unnamed.executor": "Run",
     "Tomcat Server.Tomcat 11.0.4.executor": "Run",
     "Tomcat Server.Tomcat 9.0.100.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Nadeesha-Add-released-date",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Menura Lakvindu/IdeaProjects/TicketVerse_PGNO75/src/main/webapp",
@@ -85,7 +76,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Smart Tomcat.Unnamed">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.100">
     <configuration name="Tomcat 9.0.100" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.100" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -202,15 +193,14 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Smart Tomcat.Unnamed" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.100" />
     </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -238,11 +228,23 @@
       <workItem from="1747459605864" duration="5252000" />
       <workItem from="1747485868767" duration="1198000" />
       <workItem from="1747544052151" duration="2796000" />
+      <workItem from="1747566309326" duration="3562000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="User Management updated from Hari" />

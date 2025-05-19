@@ -1,9 +1,7 @@
 package servlet;
-
 import model.Movie;
 import model.User;
 import service.MovieService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -109,8 +107,9 @@ public class MovieServlet extends HttpServlet {
     }
 
 
-
+    //add movies
     private void saveMovie(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        //get the movie details
         String title = request.getParameter("title");
         String poster = request.getParameter("poster");
         String synopsis = request.getParameter("synopsis");
@@ -129,11 +128,12 @@ public class MovieServlet extends HttpServlet {
             showtimes = Arrays.asList(showtimesArray);
         }
 
+        //create a new movie object
         Movie movie = new Movie(title, poster, synopsis, genre, duration, rating, director, cast, trailerURL, showtimes, movieStatus, releaseDate);
 
         try {
-            movieService.addMovie(movie);
-            response.sendRedirect("movie?action=manageMovies");
+            movieService.addMovie(movie); //save to movie.txt
+            response.sendRedirect("movie?action=manageMovies"); //redirect to manageMovies
         } catch (IOException e) {
             request.setAttribute("errorMessage", "Failed to save movie: " + e.getMessage());
             request.getRequestDispatcher("/addMovie.jsp").forward(request,response);
